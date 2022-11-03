@@ -13,12 +13,6 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('3P-MedicalSurvey')
 
-# Crear un objeto llamado question en el que poner condiciones de validación, 
-# la pregunta y lista con opciones de respuesta y hacer una lista de los 
-# objetos pregunta para poder triggearlas solo con el index(variable global 
-# que aumenta cada vez que el usuario responde a una pregunta con un valor correcto).
-# report
-
 
 class Question:
     """
@@ -165,7 +159,6 @@ def main():
             return False
         elif int(choice) == 2:
             generate_report()
-            #update_report_worksheet(report_data)
             return False
         else:
             print("Please enter a valid option. \n")
