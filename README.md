@@ -25,9 +25,9 @@ and print it on the terminal.
     -   The user must answer with a number contained within the options given.
     -   When the user is asked about his/her name, he/she must give an only-text answer.
 
--   Store data in external google sheet
+-   Store data in external [Google Sheet](https://docs.google.com/spreadsheets/d/1xvv8vLjPfkkf1bOrlbP-c9vWe35cvjGXuNrXniZZI_w/edit?usp=sharing)
 
--   Get data from external google sheet
+-   Get data from external [Google Sheet](https://docs.google.com/spreadsheets/d/1xvv8vLjPfkkf1bOrlbP-c9vWe35cvjGXuNrXniZZI_w/edit?usp=sharing)
 
 
 ## Testing
@@ -35,7 +35,8 @@ and print it on the terminal.
 I have manually tested this project by doing the following:
     -   Passed the code through a PEP8 linter and confirmed there are no problems.
     -   Given invalid inputs: strings when numbers are expected, out of bounds inputs.
-    -   Tested in my local terminal and the Heroku terminal.   
+    -   Tested in my local terminal and the Heroku terminal.
+    -   Checked the data is updated in the [Google Sheet](https://docs.google.com/spreadsheets/d/1xvv8vLjPfkkf1bOrlbP-c9vWe35cvjGXuNrXniZZI_w/edit?usp=sharing)
 
 ### Bug Log
 
