@@ -1,31 +1,80 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1 align="center">3P Juan Jose Ruiz Ruiz - Medical Survey</h1>
 
-Welcome Deneb331,
+[View the live project here.](https://medical-survey.herokuapp.com/)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+This app is a simulation of a medical survey in a terminal, where the user can choose if participate in the survey or get a report with the stats of the survey.
 
-## Reminders
+<h2 align="center"><img src="assets/images/3PReadmeHeader.png"></h2>
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## How to use
 
-## Creating the Heroku app
+This app opens giving a choice to the user, who can choose between two options: participate in the survey or to see a report 
+with stats of the answers given by all the previous users.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+If the user chooses to participate in the medical survey, he/she can choose between the given options with numbers, or writing in case there is no options to choose. When he/she finishes, all the data is going to be stored in a google sheet.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+On the other hand, if the user chooses to get report, the terminal automatically is going to get the data from the google sheet
+and print it on the terminal.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+## Features
 
-Connect your GitHub repository and deploy as normal.
+-   Accepts user input
 
-## Constraints
+-   Input validation and error-checking
+    -   The user must answer with a number contained within the options given.
+    -   When the user is asked about his/her name, he/she must give an only-text answer.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+-   Store data in external google sheet
 
------
-Happy coding!
+-   Get data from external google sheet
+
+
+## Testing
+
+I have manually tested this project by doing the following:
+    -   Passed the code through a PEP8 linter and confirmed there are no problems.
+    -   Given invalid inputs: strings when numbers are expected, out of bounds inputs.
+    -   Tested in my local terminal and the Heroku terminal.   
+
+### Bug Log
+
+-   Question validation not working correctly - Added answer list to the question class for better organization.
+-   Can not properly include yes/no answer in report - Changed yes/no question type for option for simplified flow.
+-   Report is checking each question twice - Refactored report function and found an extra loop that was giving the problem.
+-   Can not store the report values in the google sheet - Decided to show the report directly in the terminal
+
+### Validator Testing
+
+-   PEP8
+    -   Installed and used PEP8 formatter in the project.
+
+## Deployment
+
+This project was deployed in the Heroku's terminal.
+
+-   Steps for deployment:
+    -   Set the requirements for the project in the requirements.txt file
+    -   Fork this repository
+    -   Create a new Heroku app
+    -   Set the CREDS Var in the app settings
+    -   Set the buildbacks to Python and NodeJS in that order
+    -   Link the Heroku app to the repository
+    -   Click on Deploy
+
+## Credits
+
+### Code
+
+-   The main references used to build this website are the Love Sandwiches CI project for Python reference.
+
+
+### Content
+
+-   All content was written by the developer, based in the projects and templates given by Code Institute and my mentor help.
+
+
+### Acknowledgements
+
+-   My Mentor for continuous helpful feedback and resources.
+-   The Slack community for the instant help whenever I needed it.
